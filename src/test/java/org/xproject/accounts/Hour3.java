@@ -15,13 +15,14 @@ import java.time.Duration;
 
 public class Hour3 {
     @Test
-    public void testHour3_alerts() {
+    public void testHour3_alerts() throws InterruptedException {
 
         String appUrl = "https://demo.guru99.com/test/delete_customer.php";
         WebDriver driver = new ChromeDriver();
         driver.get(appUrl);
-        driver.findElement(By.name("cusid")).sendKeys("53920");
+        driver.findElement(By.name("cusid")).sendKeys("77777");
         driver.findElement(By.name("submit")).submit();
+        Thread.sleep(9000);
         Alert alert = driver.switchTo().alert();
         String alertText = alert.getText();
         System.out.println(alertText);
@@ -58,6 +59,9 @@ public class Hour3 {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("abcd")));
         element.click();
+
+        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("destination")));
+        element1.click();
 
 
 //        The following Expected Conditions in Selenium can be used in Explicit Wait:
@@ -107,10 +111,11 @@ public class Hour3 {
                         .xpath("/html/body/div[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[1]/td[1]"));
         String bgColor = td_Home.getCssValue("background-color");
         System.out.println("Before hover: " + bgColor);
-
+        //Actions class will be used to perform actions like
+        //double click, right click, drag and drop elements, mouse over elements etc.......
         Actions builder = new Actions(driver);
         Action mouseOverHome = builder
-                .moveToElement(link_Home)
+                .doubleClick(td_Home)
                 .build();
         //Refer Hour3getCssValuesFromApp.png file to know about available css properties
         //for that element

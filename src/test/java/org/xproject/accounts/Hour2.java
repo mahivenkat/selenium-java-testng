@@ -17,19 +17,7 @@ public class Hour2 {
         String appurl= "http://demo.guru99.com/test/newtours/";
         // Selenium: Set property for to know the location of chromedriver exe
         System.setProperty("webdriver.chrome.driver", "browserDrivers/chromedriver-win64/chromedriver.exe");
-        // Webdriver is the interface which used to create the browser session for the
-        // particular type of browser.
-
-        //What is selenium: Selenium is opensource java package which is used to
-        // interact with web applications and to test web applications.
-
-        // What are other compitative tools to Selenium: UFT(QTP), uiPath, Tosca, etc...
-
-        //Why only selenium: It is opensource, support to write tests using multiple programming language
-        //like java, python, c#, ruby, perl etc. And it is support to test web apps on multiple browsers
-        //like chrome, firefox, safary etc..
-
-        //Write a program to login an application.
+         //Write a program to login an application.
         WebDriver driver = new ChromeDriver();
         // Selenium: launch web application by accessing the url
         driver.get(appurl);
@@ -67,7 +55,10 @@ public class Hour2 {
         driver.findElement(By.xpath("//tagName[@attributeName='attributeValue']")).click();*/
         driver.close();
 
-        //End goal of this hour: Create complete test for booking a flight ticket
+        //End goal of this hour:
+        // What is locator
+        // How many locators are there
+        // Create complete test for booking a flight ticket
 
     }
 }

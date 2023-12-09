@@ -81,6 +81,9 @@ public class Hour1 {
         driver.close();
 
         //End goal of this hour: Able to understand sample test in selenium.
+        // What is selenium
+        //What is selenium webdriver
+        //What are the compitative tools for selenium
         //Able to understand some basic methods with driver object.
         //Able to understanding login test script in selenium.
     }
