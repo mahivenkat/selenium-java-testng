@@ -33,29 +33,23 @@ public class Hour2 {
         WebDriver driver = new ChromeDriver();
         // Selenium: launch web application by accessing the url
         driver.get(appurl);
-//      Thread.sleep(3000);
-//       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+        //Enter value in text box using selenium
         driver.findElement(By.name("userName")).sendKeys( "test");
         driver.findElement(By.name("password")).sendKeys( "test");
+        //Clicking an element/button using selenium
         driver.findElement(By.name("submit")).click();
-
+        //Verifying an element displayed or not in app
         boolean isLoginSuccess = driver.findElement(By.xpath("//h3[text()='Login Successfully']")).isDisplayed();
         Assert.assertEquals(isLoginSuccess, true);
 
         driver.findElement(By.linkText("Flights")).click();
 
-        boolean isPassingerFieldDisplayed = driver.findElement(By.xpath("//b[text()='Passengers:']")).isDisplayed();
-        Assert.assertEquals(isPassingerFieldDisplayed, true);
+        boolean isPassengerFieldDisplayed = driver.findElement(By.xpath("//b[text()='Passengers:']")).isDisplayed();
+        Assert.assertEquals(isPassengerFieldDisplayed, true);
         driver.findElement(By.xpath("//input[@name='tripType' and @value='oneway']")).click();
-        WebElement passingerCount = driver.findElement(By.name("passCount"));
-        Select selectObj = new Select(passingerCount);
+        WebElement passengerCount = driver.findElement(By.name("passCount"));
+        Select selectObj = new Select(passengerCount);
         selectObj.selectByIndex(2);
-
-
-
-
-
-
 
         //What is the locator:
         //Selenium will identify the elements using locators.
@@ -72,6 +66,8 @@ public class Hour2 {
         driver.findElement(By.cssSelector(">a")).click();
         driver.findElement(By.xpath("//tagName[@attributeName='attributeValue']")).click();*/
         driver.close();
+
+        //End goal of this hour: Create complete test for booking a flight ticket
 
     }
 }

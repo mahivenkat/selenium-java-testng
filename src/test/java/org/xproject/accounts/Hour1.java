@@ -8,14 +8,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * Hello world!
  *
  */
-public class Day1 {
+public class Hour1 {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
 
-// Selenium: Set property for to know the location of chromedriver exe
+        // Selenium: Set property for to know the location of chromedriver exe
         System.setProperty("webdriver.chrome.driver", "browserDrivers/chromedriver-win64/chromedriver.exe");
-        // Selenium: Initialize the chrome driver
+        // Webdriver is the interface which used to create the browser session for the
+        // particular type of browser.
+
+        //What is selenium: Selenium is opensource java package which is used to
+        // interact with web applications and to test web applications.
+
+        // What are other compitative tools to Selenium: UFT(QTP), uiPath, Tosca, etc...
+
+        //Why only selenium: It is opensource, support to write tests using multiple programming language
+        //like java, python, c#, ruby, perl etc. And it is support to test web apps on multiple browsers
+        //like chrome, firefox, safary etc..
+
+        //Write a program to login an application.
         WebDriver driver = new ChromeDriver();
 
         // Java: define a string variable
@@ -40,6 +52,10 @@ public class Day1 {
 //        driver.navigate().forward();
 //        driver.navigate().back();
 //        driver.navigate().refresh();
+        //Maximizes the browser window
+        //driver.manage().window().maximize() ;
+//        driver.manage().window().minimize();
+//        driver.manage().window().fullscreen();
         WebElement carRentalElement = driver.findElement(By.linkText("Car Rentals"));
         driver.findElement(By.id("userEmail")).sendKeys("asdfasdfsf");
         driver.findElement(By.id("password")).sendKeys("asdfasdfsf");
@@ -63,5 +79,9 @@ public class Day1 {
 
         // Selenium: close browser driver
         driver.close();
+
+        //End goal of this hour: Able to understand sample test in selenium.
+        //Able to understand some basic methods with driver object.
+        //Able to understanding login test script in selenium.
     }
 }
