@@ -1,14 +1,17 @@
 package org.xproject.accounts;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class Hour3 {
     @Test
@@ -26,7 +29,7 @@ public class Hour3 {
         alert.dismiss();
 //        alert.accept();
 //        alert.sendKeys("Text to enter in text box in the alert");
-    driver.close();
+        driver.close();
 
     }
 
@@ -34,7 +37,7 @@ public class Hour3 {
     public void testHour3_waits() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         // launch Chrome and redirect it to the Base URL
-        driver.navigate().to("https://uidai.gov.in/en/my-aadhaar/downloads.html" );
+        driver.navigate().to("https://uidai.gov.in/en/my-aadhaar/downloads.html");
 
         System.out.println(driver.getTitle());
         //4 types of wait methods available:
@@ -52,7 +55,7 @@ public class Hour3 {
         //Additional benefit of WebDriver wait is: If we mention 20 seconds of wait time,
         //for each 2 seconds, it will check for the element. If element found, it won't
         //wait for entire 20 seconds. It will come out immediately and proceed with next line of code
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("abcd")));
         element.click();
 
@@ -78,16 +81,44 @@ public class Hour3 {
 //        visibilityOfAllElementsLocatedBy()
 //        visibilityOfElementLocated()
 
-    //        //Declare and initialise a fluent wait
-    //        FluentWait wait = new FluentWait(driver);
-    ////Specify the timout of the wait
-    //        wait.withTimeout(5000, TimeUnit.MILLISECONDS);
-    ////Specify polling time
-    //        wait.pollingEvery(250, TimeUnit.MILLISECONDS);
-    ////Specify what exceptions to ignore
-    //        wait.ignoring(NoSuchElementException.class)
-    //
-    ////This is how we specify the condition to wait on.
-    //        wait.until(ExpectedConditions.alertIsPresent());
+        //        //Declare and initialise a fluent wait
+        //        FluentWait wait = new FluentWait(driver);
+        ////Specify the timout of the wait
+        //        wait.withTimeout(5000, TimeUnit.MILLISECONDS);
+        ////Specify polling time
+        //        wait.pollingEvery(250, TimeUnit.MILLISECONDS);
+        ////Specify what exceptions to ignore
+        //        wait.ignoring(NoSuchElementException.class)
+        //
+        ////This is how we specify the condition to wait on.
+        //        wait.until(ExpectedConditions.alertIsPresent());
+    }
+
+
+    @Test
+    public void testHour3_actions() throws InterruptedException {
+        String baseUrl = "http://demo.guru99.com/test/newtours/";
+        WebDriver driver = new ChromeDriver();
+
+        driver.get(baseUrl);
+        WebElement link_Home = driver.findElement(By.linkText("Home"));
+        WebElement td_Home = driver
+                .findElement(By
+                        .xpath("/html/body/div[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[1]/td[1]"));
+        String bgColor = td_Home.getCssValue("background-color");
+        System.out.println("Before hover: " + bgColor);
+
+        Actions builder = new Actions(driver);
+        Action mouseOverHome = builder
+                .moveToElement(link_Home)
+                .build();
+        //Refer Hour3getCssValuesFromApp.png file to know about available css properties
+        //for that element
+
+        mouseOverHome.perform();
+        Thread.sleep(3000);
+        bgColor = td_Home.getCssValue("background-color");
+        System.out.println("After hover: " + bgColor);
+        driver.close();
     }
 }
