@@ -1,4 +1,4 @@
-package org.xproject;
+package org.xproject.accounts;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +16,7 @@ public class Hour3 {
     @Test
     public void testHour3_alerts() throws InterruptedException {
 
-        String appUrl = https://demo.guru99.com/test/delete_customer.php;
+        String appUrl = "https://demo.guru99.com/test/delete_customer.php";
         WebDriver driver = new ChromeDriver();
         driver.get(appUrl);
         driver.findElement(By.name("cusid")).sendKeys("77777");
@@ -37,7 +37,7 @@ public class Hour3 {
     public void testHour3_waits() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         // launch Chrome and redirect it to the Base URL
-        driver.navigate().to(https://uidai.gov.in/en/my-aadhaar/downloads.html);
+        driver.navigate().to("https://uidai.gov.in/en/my-aadhaar/downloads.html");
 
         System.out.println(driver.getTitle());
         //4 types of wait methods available:
@@ -101,7 +101,7 @@ public class Hour3 {
 
     @Test
     public void testHour3_actions__right_click() throws InterruptedException {
-        String baseUrl = http://demo.guru99.com/test/newtours/;
+        String baseUrl = "http://demo.guru99.com/test/newtours/";
         WebDriver driver = new ChromeDriver();
 
         driver.get(baseUrl);
@@ -122,7 +122,7 @@ public class Hour3 {
     @Test
     public void testHour3_actions__double_click_right_click() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
-        driver.get(https://demoqa.com/buttons);
+        driver.get("https://demoqa.com/buttons");
         driver.manage().window().maximize();
         WebElement element = driver.findElement(By.xpath("//button[text()='Double Click Me']"));
         //DOUBLE CLICK
@@ -147,7 +147,7 @@ public class Hour3 {
     @Test
     public void testHour3_actions__mouse_hover(){
         WebDriver driver = new ChromeDriver();
-        driver.get(https://testsigma.com/);
+        driver.get("https://testsigma.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         WebElement element = driver.findElement(By.xpath("//a[text()='Resources']"));
@@ -156,14 +156,14 @@ public class Hour3 {
         action.moveToElement(element).build().perform();
         //Identify the locator for the element Blog and click
         driver.findElement(By.linkText("Blog")).click();
-        Assert.assertEquals(driver.getCurrentUrl(), https://testsigma.com/blog/);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://testsigma.com/blog/");
         driver.quit();
     }
 
     @Test
     public void testHour3_actions__drag_and_drop() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
-        driver.get(http://demo.guru99.com/test/drag_drop.html);
+        driver.get("http://demo.guru99.com/test/drag_drop.html");
         driver.manage().window().maximize();
         Actions action = new Actions(driver);
         WebElement source = driver.findElement(By.xpath("//*[@id='credit2']/a"));
@@ -179,7 +179,7 @@ public class Hour3 {
     @Test
     public void testHour3_actions__Key_up() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
-        driver.get(https://www.google.com/);
+        driver.get("https://www.google.com/");
         driver.manage().window().maximize();
         WebElement element = driver.findElement(By.xpath("//textarea[@title='Search']"));
         Actions action = new Actions(driver);
