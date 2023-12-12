@@ -1,0 +1,51 @@
+Which locator to be used.
+
+Sample web application:
+https://www.apsrtconline.in/oprs-web/guest/ticket/cancel.do
+
+Priorities of locators:
+If we have straight unique attribute/property then:
+              id>name>linkText>partialLinkText
+                                >className
+                                >tagName
+If we don't have straight unique attribute/property then:
+                                >cssSelector
+                                >xpath
+Straight locators:
+Ex: 1
+Element: <a class="tabcopy" href="/oprs-web/guest/home.do?h=1" target="_top" title="Home">Home</a>
+Locator: id:
+              By.linkText("Home");
+
+Ex: 2
+Element: <span class="innerpageTitleHdead">
+                                                         Cancel Ticket</span>
+Locator: className
+              By.className("innerpageTitleHdead")
+
+Locators:
+              If we have id and name there, then use id only.
+              Element: <input type="button" name="searchBtn" id="searchBtn" value="Search" class="submitBtn" title="Search" onclick="hideMessages();showCancelTicket();">
+              By.id("searchBtn")
+
+Ex: 3
+If we don't know exact property to search, then use 'contains'
+If we have multiple tags with same property we suppose to use 'and' to filter
+Element: <td class="formlabel">
+                                                                                      Ticket No.</td>
+
+Locator: xpath:
+              //td[@class='formlabel' and contains(.,"Ticket No.")]
+
+Ex: 4
+Element: <span>(24/7 Customer Support)</span>
+Locator: xpath:
+              By.xpath("//span[.='24/7 Customer Support)'])
+
+Validations using locators:
+Everything in selenium is to interact with elements in a web page. Based on the elements behaviors, we will take decisions to make a
+test step is passed or failed.
+If we suppose to verify blinking or not:
+              <a class="tabcopy blinking" href="/oprs-web/_assets/images/new/Doorlocations.pdf" target="_blank" title="Door Delivery Locations List">Door Delivery Locations List</a>
+String blinkingProperty = driver.findElement(By.linkText("Door Delivery Locations List")).getProperty("class")
+Validation we suppose to do for blinkingProperty.
