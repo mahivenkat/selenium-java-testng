@@ -1,4 +1,4 @@
-package org.xproject.accounts;
+package org.xproject.accounts.seleniumPractice;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

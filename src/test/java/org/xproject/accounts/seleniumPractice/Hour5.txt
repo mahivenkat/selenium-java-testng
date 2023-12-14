@@ -14,7 +14,7 @@ If we don't have straight unique attribute/property then:
 Straight locators:
 Ex: 1
 Element: <a class="tabcopy" href="/oprs-web/guest/home.do?h=1" target="_top" title="Home">Home</a>
-Locator: id:
+Locator: linkText:
               By.linkText("Home");
 
 Ex: 2
