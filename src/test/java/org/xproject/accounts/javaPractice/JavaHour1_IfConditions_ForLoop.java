@@ -16,7 +16,7 @@ public class JavaHour1_IfConditions_ForLoop {
         }
 
         //to iterate the code
-        for(int i =0;i<=25;i++)
+        for(int i =0;i<=30;i++)
         {
             System.out.println("for loop. iteration number: " + i);
             if(i<=10) {
@@ -24,7 +24,7 @@ public class JavaHour1_IfConditions_ForLoop {
                 continue;
             }else {
                 System.out.println("Make pizza. Pizza number: " + i);
-                if(i<=25){
+                if(i==25){
                     System.out.println("Make last pizza. Pizza number: " + i);
                 }
                 break;
