@@ -131,7 +131,7 @@ public class Hour3 {
         boolean is_double_click_msg_displayed = driver.findElement(By.xpath(
                 "//p[@id='doubleClickMessage' and text()='You have done a double click']")
         ).isDisplayed();
-        Assert.assertEquals(is_double_click_msg_displayed, true);
+        Assert.assertTrue(is_double_click_msg_displayed);
         System.out.println("double click is happened");
 
         //RIGHT CLICK

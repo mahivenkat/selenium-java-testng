@@ -28,12 +28,12 @@ public class Hour2 {
         driver.findElement(By.name("submit")).click();
         //Verifying an element displayed or not in app
         boolean isLoginSuccess = driver.findElement(By.xpath("//h3[text()='Login Successfully']")).isDisplayed();
-        Assert.assertEquals(isLoginSuccess, true);
+        Assert.assertTrue(isLoginSuccess);
 
         driver.findElement(By.linkText("Flights")).click();
 
         boolean isPassengerFieldDisplayed = driver.findElement(By.xpath("//b[text()='Passengers:']")).isDisplayed();
-        Assert.assertEquals(isPassengerFieldDisplayed, true);
+        Assert.assertTrue(isPassengerFieldDisplayed);
         driver.findElement(By.xpath("//input[@name='tripType' and @value='oneway']")).click();
         WebElement passengerCount = driver.findElement(By.name("passCount"));
         Select selectObj = new Select(passengerCount);

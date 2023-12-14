@@ -2,6 +2,16 @@ package org.xproject.accounts.javaPractice;
 
 //https://arctern.com/AboutVolt.html
 
+//What is java: It is a computer programming language which supports developing web, window, mobile,
+// api,bigdata etc... applications.
+//And as well it can help to web scrapping(where we can grab data from internet).
+
+//Why are we using java for selenium - automation testing.
+//Selenium helps to grab data from web applications and to interact web applications.
+//Hence, we are using selenium for automation testing.
+//Selenium apis/tool available in multiple programming language like in java, python, perl, ruby, c# etc....
+//My project development s based on java. So for automation testing also, we are using selenium-java binding.
+//Hence, we use java for automation testing.
 
 //package in which the current class exists
 //What is package: it is a group of class files
@@ -52,13 +62,13 @@ public class JavaHour1_PrimitiveDataTypes {
         char firstCharOfAccount = 'C';
 
         System.out.println("byte " + String.valueOf(sampleByte)  + "\n" +
-                "        int " + String.valueOf(amount1) + "\n" +
+                "        int " + amount1 + "\n" +
                 "        short " + String.valueOf(amount2)  + "\n" +
-                "        long " + String.valueOf(amount3)  + "\n" +
-                "        float " + String.valueOf(price) + "\n" +
-                "        double " + String.valueOf(price2)  + "\n" +
-                "        boolean " + String.valueOf(isElementDisplayed) + "\n" +
-                "        char " + String.valueOf(firstCharOfAccount));
+                "        long " + amount3 + "\n" +
+                "        float " + price + "\n" +
+                "        double " + price2 + "\n" +
+                "        boolean " + isElementDisplayed + "\n" +
+                "        char " + firstCharOfAccount);
     }
 
     //Data Type |Default Value |Default size         |Range
