@@ -1,6 +1,6 @@
 package org.xproject.accounts.javaPractice;
 
-public class Hour5_AccessModifiers {
+public class Hour4_AccessModifiers {
     // code here
     //Access Modifier: Access modifier keywords sets the access level for the classes, variables, methods, constructors
     // and interfaces
@@ -23,4 +23,13 @@ public class Hour5_AccessModifiers {
         System.out.println("public class method");
     }
 
+    public static void main(String[] args) {
+        System.out.println(discount);
+        //Unable to change the final static type data
+//        discount =22;
+
+        Hour4_AccessModifiers obj = new Hour4_AccessModifiers();
+        //Unable tto change the final type data
+//        obj.membershipDiscount = 99;
+    }
 }
