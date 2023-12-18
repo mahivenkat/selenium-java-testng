@@ -7,4 +7,5 @@ public class Hour4_AccessModifiers_SamePackage {
         System.out.println(new Hour4_AccessModifiers().defaultNumber);
 //        System.out.println(new Hour4_AccessModifiers().privateNumber);
     }
+
 }
