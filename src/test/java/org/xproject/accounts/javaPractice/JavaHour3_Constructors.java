@@ -66,7 +66,7 @@ class JustOneClass {
         JavaHour3_Constructors objA = new JavaHour3_Constructors();
         System.out.println("Constructor without args: " + objA.age);
         JavaHour3_Constructors objB = new JavaHour3_Constructors(15);
-        System.out.println("Constructor without args: " + objB.age);
+        System.out.println("Constructor with args: " + objB.age);
         objA.createProduct();
     }
 

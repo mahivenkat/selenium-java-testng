@@ -21,9 +21,12 @@ public class Hour4_AccessModifiersCalling extends Hour4_AccessModifiers {
 
     }
     public static void main(String[] args) {
-//        Hour4_AccessModifiers obj = new Hour4_AccessModifiers();
-//        System.out.print(obj.number);
+        Hour4_AccessModifiers obj = new Hour4_AccessModifiers();
+        System.out.print(obj.publicNumber);
 //        System.out.print(obj.protectedNumber);
+        Hour4_AccessModifiersCalling ob = new Hour4_AccessModifiersCalling();
+        //Reading protected number which is defined in another class
+        System.out.println(ob.protectedNumber);
         Hour4_AccessModifiersCalling obj1 = new Hour4_AccessModifiersCalling();
         System.out.println(obj1.amount);
         System.out.println(obj1.discount);
