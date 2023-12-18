@@ -39,11 +39,15 @@ public class JavaHour3_Constructors{
     //Output is Product added successfully. Product status is Active.
     //Action: output of the behavior(return type of the method)
     public int age = 30;
+    //Constructor without arguments
     public JavaHour3_Constructors(){
         //age = 5;
         System.out.println("no special initialization");
     }
+
+    //Constructor with arguments.
     public JavaHour3_Constructors(int age){
+        //
         this.age = age;
     }
 
