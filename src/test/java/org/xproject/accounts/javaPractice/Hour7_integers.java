@@ -1,7 +1,5 @@
 package org.xproject.accounts.javaPractice;
 
-import java.util.Arrays;
-
 public class Hour7_integers {
     public static int a = 20;
     public static int b = 12;
@@ -14,6 +12,7 @@ public class Hour7_integers {
         System.out.println(a/b);
         //gives reminder
         System.out.println(a%b);
+        System.out.println("--------");
         //gives power to the integer
         System.out.println(a^2);
         System.out.println(a^3);
@@ -31,7 +30,5 @@ public class Hour7_integers {
         System.out.println(Math.ceil(23.982282));
         System.out.println(Math.floor(23.982282));
         System.out.println(Math.random());
-
-
     }
 }

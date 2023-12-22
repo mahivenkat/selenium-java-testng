@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Hour7_Strings {
     public String name = "Venkat";
     public String name1 = new String("John");
-    public static String text = "Product has been added successfully.";
+    public static String text = "Product has been created successfully.";
 
     public static void main(String[] args) {
         System.out.println(new Hour7_Strings().name);
@@ -15,7 +15,7 @@ public class Hour7_Strings {
         System.out.println(text.toUpperCase());
         System.out.println(text.length());
         System.out.println(text.charAt(2));
-        System.out.println((text.compareTo("Product has been created")));
+        System.out.println((text.compareTo("Product has been created.")));
         System.out.println("Product".compareToIgnoreCase("product"));
         System.out.println(text.concat(" For customer Alex John."));
         System.out.println(text.contains("success"));
@@ -30,7 +30,7 @@ public class Hour7_Strings {
         System.out.println(text.repeat(2));
         System.out.println(text.replace('c', 'C'));
         System.out.println(text.replaceAll("c", "C"));
-        String[] x = text.split("s", 2);
+        String[] x = text.split("s", 3);
         System.out.println(Arrays.toString(x));
         System.out.println("   hello   ".strip());
         System.out.println("   hello   ". stripLeading());
@@ -42,7 +42,6 @@ public class Hour7_Strings {
         char [] chars = text.toCharArray();
         System.out.println(Arrays.toString(chars));
         System.out.println(text.subSequence(1,5));
-
 
     }
 }
