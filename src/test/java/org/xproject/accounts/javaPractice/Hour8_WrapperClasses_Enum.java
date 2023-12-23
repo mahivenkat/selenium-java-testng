@@ -40,9 +40,8 @@ public class Hour8_WrapperClasses_Enum {
         // Need to sort 100 number in a primitive type int array []. We need to write some programming to acheive this.
         // Instead, if we use collection framework on Integer type data, we have in-built methods in java.
 
-
-        //Automatic conversion on Wrapper class to primitive data type is called auto boxing.
-        //Automatic conversion of primitive type to wrapper class is called auto unboxing.
+        //Automatic conversion of primitive type to wrapper class is called auto boxing.
+        //Automatic conversion on Wrapper class to primitive data type is called auto unboxing.
         //java allows auto-boxing and auto-unboxing.
 
         //How to convert primitive type to wrapper class: Integer.valueOf(amount)
