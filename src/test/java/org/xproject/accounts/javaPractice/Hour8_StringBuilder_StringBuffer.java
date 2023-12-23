@@ -30,7 +30,7 @@ public class Hour8_StringBuilder_StringBuffer {
         System.out.println(stringBufferObj.deleteCharAt(3));
         System.out.println(stringBufferObj.replace(1,3,"HHH"));
         System.out.println(stringBufferObj.substring(1,5));
-        System.out.println(stringBuilderObj);
+        System.out.println(stringBufferObj);
 
         System.out.println(System.identityHashCode(stringBufferObj));
         System.out.println("------string buffer done------");
