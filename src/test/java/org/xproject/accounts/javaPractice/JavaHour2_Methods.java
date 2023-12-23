@@ -23,6 +23,10 @@ public class JavaHour2_Methods {
         staticMethod_deleteAccount();
         System.out.println(javaHour1.projectId);
         System.out.println(tax);
+        System.out.println(javaHour1.method3());
+//        System.out.println(accId);
+
+
     }
 
     //Creating a method without parameters
@@ -44,6 +48,13 @@ public class JavaHour2_Methods {
     //Creating a static method
     public static  void staticMethod_deleteAccount(){
         System.out.println("Delete account");
+    }
+
+    public int method3(){
+        System.out.println("method3");
+        int accountGenerated = 99;
+        System.out.println(accountGenerated);
+        return accountGenerated;
     }
 
 }

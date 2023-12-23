@@ -9,7 +9,7 @@ public class Hour8_WrapperClasses_Enum {
 
     public static int amount = 20;
     public static Integer discount = 20;
-
+    public static Integer discount1 = new Integer(20);
     public static  char character = 'C';
     public static Character letter = 'D';
 
@@ -54,6 +54,11 @@ public class Hour8_WrapperClasses_Enum {
         if(amount==discount){
             System.out.println("Auto boxing is happened.");
         }
+        //changing the type of data is called type casting...
 
+        //type casting is done from primitive integer type to Wrapper Class Integer -  type
+        System.out.println(Integer.valueOf(2).getClass());
+        //type casting is done from primitive integer type to Class String -  type
+        System.out.println(String.valueOf(2).getClass());
     }
 }

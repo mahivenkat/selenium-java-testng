@@ -39,6 +39,13 @@ public class Hour8_StringBuilder_StringBuffer {
         stringBuilderObj.append(" country");
         System.out.println(System.identityHashCode(stringBuilderObj));
         System.out.println("------string builder done------");
+        //StringBuffer is synchronized. This means that multiple threads cannot call the methods of
+        // StringBuffer simultaneously.
+        //StringBuilder is asynchronized. This means that multiple threads can call the methods of
+        // StringBuilder simultaneously.
+
+        //Since there is no preliminary check for multiple threads, StringBuilder is a lot
+        // faster than StringBuffer.
     }
 }
 
