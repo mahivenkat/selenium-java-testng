@@ -32,7 +32,7 @@ public class Class1 extends Class3 {
         System.out.println("Current class variable: " + accountStatus);
         System.out.println("Current class variable: " + this.charge);
         System.out.println("Super class variable: " + super.area);
-        this.method1();
+        this.method3();
         super.method2();
     }
     public void method2(){
