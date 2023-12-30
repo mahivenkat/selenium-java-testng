@@ -26,19 +26,20 @@ public class Class1 extends Class3 {
     //One class can extend another class.
     //child-parent;sub-super;derived-base===>this is the wording used for the classes.
     //Using inheritance: we can reuse the members(variables & methods) of parent class
-    // in child class without duplicating them.
+    // to avoid the duplication.
 
     //Inheritance in Java is the method to create a hierarchy between
     // classes by inheriting from other classes.
-    // Java Inheritance is transitive - so if Sedan extends Car and Car extends Vehicle,
-    // then Sedan is also inherited from the Vehicle class.
+    // Java Inheritance is transitive - so if Benz extends Car and Car extends Vehicle,
+    // then Benz is also inherited from the Vehicle class.
     // The Vehicle becomes the superclass of both Car and Sedan.
     public void method1(){
         System.out.println("method1 in class1");
         System.out.println("Current class variable: " + charge);
         System.out.println("Current class variable: " + accountStatus);
         System.out.println("Current class variable: " + this.charge);
-        System.out.println("Super class variable: " + super.area);
+        System.out.println("Super class variable: " + super.area);//child-parent; sub-super
+        //derived-base
         this.method3();
         this.method2();
         super.method2();

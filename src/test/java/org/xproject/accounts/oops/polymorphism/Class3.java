@@ -16,15 +16,28 @@ public class Class3 {
         this.circumference = circumference;
     }
 
+    public static void main(String[] args) {
+        Class3 obj = new Class3();
+//        obj.method2();
+        obj.method2(22);
+    }
     public void method1(){
         System.out.println("method1 in class3");
     }
-    public void method2(){
-        System.out.println("method2 in class3. Circumference: "  + circumference);
-    }
+//    public void method2(){
+//        System.out.println("method2 in class3. Circumference: "  + circumference);
+//    }
 
     public void method2(int circumference){
         System.out.println("method2 in class3. Circumference: "  + circumference);
+    }
+
+    public void method2(int area, int volume){
+        System.out.println("Method2 in class3");
+    }
+
+    public void method2(boolean isCustomerAccount){
+        System.out.println("method2 in class3");
     }
     public void method3(){
         System.out.println("method3 in class3");
