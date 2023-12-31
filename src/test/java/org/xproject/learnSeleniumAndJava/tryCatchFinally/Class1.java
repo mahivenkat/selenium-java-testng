@@ -6,8 +6,9 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import org.xproject.learnSeleniumAndJava.testNgPractice.TestNgBaseTest;
 
-public class Class1{
+public class Class1 extends TestNgBaseTest {
     @Test
     public  void validateCgmEgv() {
         WebDriver driver = new ChromeDriver();
