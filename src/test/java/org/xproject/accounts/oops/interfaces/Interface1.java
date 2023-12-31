@@ -11,6 +11,7 @@ public interface Interface1 {
     public abstract void editAccount();
     public abstract void deleteAccount();
 }
+
 //Define another interface
 interface Interface2 {
     public abstract void createProduct();
