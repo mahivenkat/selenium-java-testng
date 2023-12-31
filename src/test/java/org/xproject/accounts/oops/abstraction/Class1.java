@@ -1,8 +1,12 @@
 package org.xproject.accounts.oops.abstraction;
 
-
-
 // Abstract class
+//What is abstract class:
+//A class with abstract keyword and with at least one abstract method is called
+//abstract class.
+//What is abstract method:
+//A method with abstract keyword and no-body is called abstract method.
+
 abstract class Animal {
     // Abstract method (does not have a body)
     public abstract void animalSound();
@@ -13,6 +17,8 @@ abstract class Animal {
 }
 
 // Subclass - Dog (inherit from Animal)
+//To extend abstract class, need to implement the abstract methods.
+//else it will throw error.
 class Dog extends Animal {
     @Override
     public void animalSound() {
@@ -22,8 +28,7 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal{
-
-    //if we don't define method then error will be thrown.
+    //if we don't define/implement method, then error will be displayed.
     //if we want to extend any abstract class means: we should implement
     // the abstract methods in the parent class.
     //Note: regular methods in abstract class, no need to implement in child classes

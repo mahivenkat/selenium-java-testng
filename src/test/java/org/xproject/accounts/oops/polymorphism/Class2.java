@@ -1,7 +1,5 @@
 package org.xproject.accounts.oops.polymorphism;
 
-
-
 public class Class2 {
 
     public int area = 29;

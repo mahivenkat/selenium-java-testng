@@ -1,11 +1,11 @@
 package org.xproject.accounts.oops.polymorphism;
 
-
+//overloading: methods and constructors can be created with same name
+// but with different parameters.
+//This is called overloading.
 public class Class3 {
-
     public int area = 29;
     public  int volume = 93;
-
     public static int circumference = 58;
 
     public Class3(){

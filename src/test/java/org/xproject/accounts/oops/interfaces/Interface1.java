@@ -2,31 +2,33 @@ package org.xproject.accounts.oops.interfaces;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
+//what is interface:
+// Java entity which has all the abstract methods is called interface.
+// Interface helps to get  multiple inheritance in java.
+//Define an interface:
 public interface Interface1 {
     public abstract void createAccount();
     public abstract void editAccount();
     public abstract void deleteAccount();
 }
-
+//Define another interface
 interface Interface2 {
     public abstract void createProduct();
     public abstract void editProduct();
     public abstract void deleteProduct();
 }
 
-//Multiple inheritance is possible in java for interfaces. not for the classes.
+//Multiple inheritance is possible in java through interfaces. not for the classes.
 class Class1 implements Interface1, Interface2{
     public static void main(String[] args) {
 
-        WebDriver obj = new ChromeDriver();
-        obj.get("https://tcs.com");
-//        Class1 obj = new Class1();
-//        Interface1 i1 = new Class1();
-//        Interface2 i2 = new Class1();
-//        i1.createAccount();
-//        i2.createProduct();
+//        WebDriver obj = new ChromeDriver();
+//        obj.get("https://tcs.com");
+        Class1 obj = new Class1();
+        Interface1 i1 = new Class1();
+        Interface2 i2 = new Class1();
+        i1.createAccount();
+        i2.createProduct();
         //i1.createProduct();--this is not allowed.
     }
 
