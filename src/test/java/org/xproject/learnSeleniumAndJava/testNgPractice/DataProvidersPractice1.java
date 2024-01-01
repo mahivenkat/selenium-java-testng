@@ -21,4 +21,12 @@ public class DataProvidersPractice1 {
         int sum = a + b;
         Assert.assertEquals(result, sum);
     }
+
+    @Test (dataProvider = "ReadExcelData1", dataProviderClass = Class2.class )
+    public void readExcelData (String num, String nameOfPerson, String city,
+                               String pincode){
+        System.out.println("num value: "  + num +", name value; " + nameOfPerson +
+                ", city value; " + city +", pincode value; " + pincode);
+    }
+
 }
