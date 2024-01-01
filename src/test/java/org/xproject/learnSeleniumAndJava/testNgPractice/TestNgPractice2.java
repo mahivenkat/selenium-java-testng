@@ -2,7 +2,7 @@ package org.xproject.learnSeleniumAndJava.testNgPractice;
 
 import org.testng.annotations.Test;
 
-public class testNgPractice2 extends TestNgBaseTest {
+public class TestNgPractice2 extends TestNgBaseTest {
     @Test
     public void test11(){
         System.out.println("test11.....");

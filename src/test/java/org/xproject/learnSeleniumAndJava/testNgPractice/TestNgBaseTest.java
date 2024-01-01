@@ -15,7 +15,7 @@ public class TestNgBaseTest {
     }
     @BeforeClass
     public void startingModuleTests(){
-        System.out.println("Starting..module tests....");
+        System.out.println("Starting..module/class tests....");
     }
 
     @BeforeTest
@@ -34,7 +34,7 @@ public class TestNgBaseTest {
 
     @AfterClass
     public void afterClass(){
-        System.out.println("After test class run...");
+        System.out.println("After test module/class run...");
     }
 
     @AfterTest
