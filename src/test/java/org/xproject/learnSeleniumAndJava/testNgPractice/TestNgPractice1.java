@@ -1,7 +1,6 @@
 package org.xproject.learnSeleniumAndJava.testNgPractice;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.xproject.learnSeleniumAndJava.javaPractice.A;
 
 public class TestNgPractice1 extends TestNgBaseTest {
     @Test
