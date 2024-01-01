@@ -23,8 +23,10 @@ public class DataProvidersPractice1 {
     }
 
     @Test (dataProvider = "ReadExcelData1", dataProviderClass = Class2.class )
-    public void readExcelData (String num, String nameOfPerson, String city,
+    public void test23 (String num, String nameOfPerson, String city,
                                String pincode){
+        System.out.println("Starting test....test23.... ");
+        System.out.println("test data using:");
         System.out.println("num value: "  + num +", name value; " + nameOfPerson +
                 ", city value; " + city +", pincode value; " + pincode);
     }

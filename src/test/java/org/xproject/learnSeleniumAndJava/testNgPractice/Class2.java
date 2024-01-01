@@ -54,6 +54,7 @@ public class Class2 {
         int colNum= worksheet.getRow(0).getLastCellNum(); // get last ColNum
         Object data[][]= new Object[rowNum-1][colNum]; // pass my  count data in array
         XSSFRow row;
+        XSSFCell cell;
         DataFormatter formatter = new DataFormatter(); //creating formatter using the default locale
 
         for(int i=0; i<rowNum-1; i++) //Loop work for Rows
@@ -66,7 +67,7 @@ public class Class2 {
                     data[i][j]= "";
                 else
                 {
-                    XSSFCell cell= row.getCell(j);
+                    cell= row.getCell(j);
                     if(cell==null)
                         data[i][j]= ""; //if it get Null value it pass no data
                     else
