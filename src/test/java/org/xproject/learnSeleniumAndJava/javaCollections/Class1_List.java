@@ -49,8 +49,8 @@ public class Class1_List {
         //So insertion and deletion will be faster in case LinkedList and LinkedHashSet.
         //To access elements is faster in case of ArrayList and HashSet are faster.
 
-        ArrayList<Integer> a = new ArrayList<Integer>();
-//        LinkedList<Integer> a = new LinkedList<>();
+//        ArrayList<Integer> a = new ArrayList<Integer>();
+        LinkedList<Integer> a = new LinkedList<>();
 
 //        Set c = new HashSet();
 //        Set d = new LinkedHashSet();

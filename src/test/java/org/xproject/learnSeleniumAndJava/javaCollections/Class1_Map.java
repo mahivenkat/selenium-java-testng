@@ -12,7 +12,12 @@ public class Class1_Map {
 //        Map g = new LinkedHashMap();
 //        Map h = new TreeMap();
         a.put("G6", 0); a.put("G8", 32); a.put("G7", 247);
+        a.put("CustomerDiscount", 100);
+        a.put("EnterpriseSuperAdmin", 0);
+        a.put("ServiceBranch", 50);
         System.out.println(a);
+        System.out.println(a.get("ServiceBranch"));
+        System.out.println("part1....");
         System.out.println(a.keySet());//keySet returns all the keys as Set
         System.out.println(a.values());
         Iterator<String> i = a.keySet().iterator();
