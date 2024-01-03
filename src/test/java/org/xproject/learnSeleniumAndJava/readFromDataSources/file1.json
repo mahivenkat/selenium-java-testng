@@ -16,5 +16,13 @@
       "Toyata"
     ],
     "job":"Doctor"
-  }
+  },{
+  "name":"Mark11",
+  "city":"Oslo11",
+  "cars":[
+    "VW",
+    "Toyata"
+  ],
+  "job":"Doctor11"
+}
 ]

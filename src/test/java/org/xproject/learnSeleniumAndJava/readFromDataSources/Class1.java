@@ -48,6 +48,7 @@ public class Class1 {
     }
 
     public static void readJsonFile() throws IOException, ParseException {
+        //json abbreviation: java synchronous object notation.
         System.out.println("Start read json file");
         JSONParser parser = new JSONParser();
         JSONArray jsonArray = (JSONArray) parser.parse(
