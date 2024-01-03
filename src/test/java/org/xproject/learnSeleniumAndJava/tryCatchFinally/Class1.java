@@ -9,12 +9,23 @@ import org.testng.annotations.Test;
 import org.xproject.learnSeleniumAndJava.testNgPractice.TestNgBaseTest;
 
 public class Class1 extends TestNgBaseTest {
+    public static int amount=33;
+    public final static int charge = 999;
     @Test
     public  void validateCgmEgv() {
+        System.out.println(amount);
+        System.out.println();
         WebDriver driver = new ChromeDriver();
         String baseUrl = "http://demo.guru99.com/test/newtours/";
         driver.get(baseUrl);
-        driver.findElement(By.name("userName")).sendKeys("test");
+        System.out.println("part1.....");
+
+            driver.findElement(By.name("userName")).sendKeys("test");
+
+        //If we want to overcome the errors occurred during program execution, we will use
+        //try catch block.
+        //finally block is optional. But if we mention it, it will execute all time.
+        //we can multiple catch blocks.
         System.out.println("username entered");
         try {
             System.out.println("password entering.....");
@@ -28,6 +39,12 @@ public class Class1 extends TestNgBaseTest {
             finally {
             System.out.println("Do this finally.....");
         }
+
+        //final: We cannot change the data if we define with final keyword.
+        //finalize(); This methods we will use to delete the objects.
+        //Java has inbuilt mechanism to execute finalize method.
+        //Stale element error: Element is identified. But when about to perform action on
+        //element, that element is not intractable. This tyep of error is call stale element error.
         driver.close();
     }
 }
