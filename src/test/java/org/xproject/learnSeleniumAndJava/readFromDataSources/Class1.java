@@ -28,7 +28,7 @@ public class Class1 {
         }
 
         // Declaring a string variable
-        String st;
+        String st="";
         // Condition holds true till there is character in a string
         while ((st = br.readLine()) != null) {
             // Print the string
@@ -53,10 +53,11 @@ public class Class1 {
         JSONArray jsonArray = (JSONArray) parser.parse(
                 new FileReader(
                         "src/test/java/org/xproject/learnSeleniumAndJava/readFromDataSources/file1.json"));
-
+        //String abc = "";
+        //Object class is super class to all the classes in java.
         for (Object o : jsonArray) {
             JSONObject person = (JSONObject) o;
-
+            //(String)--> this is type casting(changing the type) to string.
             String strName = (String) person.get("name");
             System.out.println("Name::::" + strName);
 
